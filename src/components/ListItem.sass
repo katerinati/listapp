@@ -1,0 +1,39 @@
+.listItem
+  display: flex
+  padding: 7px
+  border: 1px solid transparent
+  &:not(:last-of-type)
+    border-bottom: 1px solid #73df72
+
+  button
+    cursor: pointer
+    background: none
+    border: none
+    font-size: 20px
+    outline: none
+    color: gray
+    transition: color .25s ease-in-out
+
+    &:hover
+      color: black
+
+  [type='checkbox']
+    align-self: center
+    margin-right: 5px
+
+  [type='text']
+    padding: 2px
+    font-size: 16px
+    border-color: transparent
+    border-bottom-color: #f5f5f5
+    outline: none
+
+  p,
+  .editTextInput
+    flex-grow: 1
+    align-self: center
+
+  p
+    padding-left: 5px
+    padding-top: 2px
+    font-size: 16px

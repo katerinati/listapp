@@ -13,6 +13,6 @@ export default (prevState = {}, action) => {
       return {items: items.map(item => ((item.id === payload.item.id) ? {...item, ...payload.item} : item))};
 
     default:
-      return {items: []}
+      return prevState
   }
 }

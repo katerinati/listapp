@@ -2,6 +2,7 @@ import React, {PureComponent} from "react"
 import {connect} from "react-redux"
 import ListItem from "./ListItem"
 import {addItem, removeItem, updateItem} from "../redux/actions"
+import "./App.sass"
 
 class App extends PureComponent {
   state = {
@@ -19,17 +20,24 @@ class App extends PureComponent {
 
   render() {
     return (
-      <div>
-        {this.props.items.map(item =>
-          <ListItem
-            key={item.id}
-            text={item.text}
-            isDone={item.isDone}
-            onRemoveClick={() => this.props.removeItem(item.id)}
-            onUpdateClick={(changes) => this.props.updateItem({...item, ...changes})}
-          />
-        )
+      <div className="app">
+        {this.props.items.length ?
+          <div className="list">
+            {this.props.items.map(item =>
+              <ListItem
+                key={item.id}
+                text={item.text}
+                isDone={item.isDone}
+                onRemoveClick={() => this.props.removeItem(item.id)}
+                onUpdateClick={(changes) => this.props.updateItem({...item, ...changes})}
+              />
+            )
+            }
+          </div>
+          :
+          <h3>Nothing here so far :(</h3>
         }
+
         <form onSubmit={this.addItem}>
           <input
             type="text"
