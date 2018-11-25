@@ -2,6 +2,7 @@
   "name": "listapp",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://katerinati.github.io/listapp/",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
@@ -63,7 +64,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
