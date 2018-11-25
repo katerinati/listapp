@@ -7,7 +7,7 @@ import mainReducer from "./redux/reducers"
 import { saveState, loadState } from './helpers/localStorage'
 import "reset-css"
 
-const persistedState = loadState();
+const persistedState = loadState() || {items: []};
 const store = createStore(mainReducer, persistedState);
 
 store.subscribe(() => {
