@@ -2,7 +2,6 @@
   "name": "listapp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://katerinati.github.io/listapp",
   "dependencies": {
     "@babel/core": "7.1.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.8",
